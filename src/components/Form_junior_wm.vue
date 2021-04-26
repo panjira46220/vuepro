@@ -217,7 +217,7 @@ var database = firestore.database()
 var contactRef = database.ref('/contacts')
 
   export default {
-    name: "form_junior_wm",
+    name: "form_junior_woman",
     data() {
       return {
           data_index: this.$route.params.data,
@@ -266,7 +266,7 @@ var contactRef = database.ref('/contacts')
           gun_number3:gun_number3,
           competitiontype1:competitiontype1,
           data_index:data_index,
-          data_ty:data_ty
+          data_ty:data_index
       }
       contactRef.child(this.data_index).child('namelist/junior_woman').push(data)
           this.nameth_1 =  ''

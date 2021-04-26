@@ -266,7 +266,7 @@ var contactRef = database.ref('/contacts')
           gun_number3:gun_number3,
           competitiontype1:competitiontype1,
           data_index:data_index,
-          data_ty:data_ty
+          data_ty:data_index
       }
       contactRef.child(this.data_index).child('namelist/normal_man').push(data)
           this.nameth_1 =  ''

@@ -182,15 +182,15 @@
       <!-- ประเภทการแข่งขัน -->
 
       
-    <b-form-group label="เยาวชน(ชาย):" v-slot="{ ariaDescribedby }">
+    <b-form-group label="เยาวชน(ชาย):" >
           <ul>
           <b-form-checkbox
             v-for="(junior_man,index) in data1.junior_man"
             v-model="competitiontype1"
             :key="index"
             :value="junior_man"
-            :aria-describedby="ariaDescribedby"
-            name="flavour-3a"
+            
+            
           >
             {{junior_man}} 
           </b-form-checkbox>
@@ -199,7 +199,7 @@
         
 
 
-      <b-button type="submit" variant="primary"  @click="insertToContact(data_index,data_ty,nameth_1,nameth_2,nameeng_1,nameeng_2,nationality,nationality2,age, phone,email,gun_name1,gun_number1,gun_name2, gun_number2,gun_name3,gun_number3,competitiontype1)">Submit</b-button>
+      <b-button type="submit" variant="primary"  @click="insertToContact(data_index,data_ty,nameth_1,nameth_2,nameeng_1,nameeng_2,nationality,nationality2,age,phone,email,gun_name1,gun_number1,gun_name2, gun_number2,gun_name3,gun_number3,competitiontype1)">Submit</b-button>
        
 
     <!-- <b-card class="mt-3" header="Form Data Result">
@@ -246,7 +246,6 @@ var contactRef = database.ref('/contacts')
     },
     
     methods: {
-      
       insertToContact (data_index,data_ty,nameth_1,nameth_2,nameeng_1,nameeng_2,nationality,nationality2,age, phone,email,gun_name1,gun_number1,gun_name2, gun_number2,gun_name3,gun_number3,competitiontype1) {
       let data = {
           nameth_1:nameth_1,
@@ -265,8 +264,9 @@ var contactRef = database.ref('/contacts')
           gun_name3:gun_name3,
           gun_number3:gun_number3,
           competitiontype1:competitiontype1,
-          data_index:data_index,
-          data_ty:data_ty
+          ata_index:data_index,
+          data_ty:data_index
+          
       }
       contactRef.child(this.data_index).child('namelist/junior_man').push(data)
           this.nameth_1 =  ''
