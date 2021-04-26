@@ -4,9 +4,13 @@ import Home from '../views/Home.vue'
 import Contest from '../components/Contest.vue'
 import AddContest from '@/components/AddContest.vue'
 import AddType from '@/components/AddType.vue'
-import Form_test from '@/components/Form_test'
-
-
+import Form_normal_wm from '@/components/Form_normal_wm'
+import Register from '@/components/Register'
+import Form_normal_m from '@/components/Form_normal_m'
+import Form_junior_wm from '@/components/Form_junior_wm'
+import Form_junior_m from '@/components/Form_junior_m'
+import Form_master_wm from '@/components/Form_master_wm'
+import Form_master_m from '@/components/Form_master_m'
 Vue.use(VueRouter)
 
 const routes = [
@@ -21,6 +25,11 @@ const routes = [
     component: Contest
   },
   {
+    path: '/register/:data/:data1',
+    name: 'addregister',
+    component: Register
+  },
+  {
     path: '/addcontest',
     name: 'addcontestname',
     component: AddContest
@@ -31,9 +40,34 @@ const routes = [
     component: AddType
   },
   {
-    path: '/contest/form',
-    name: 'form',
-    component: Form_test
+    path: '/form_normal_m/:data/:data1/:data2',
+    name: 'form_normal_m',
+    component: Form_normal_m
+  },
+  {
+    path: '/form_normal_wm/:data/:data1/:data2',
+    name: 'form_normal_wm',
+    component: Form_normal_wm
+  },
+  {
+    path: '/form_junior_wm/:data/:data1/:data2',
+    name: 'form_junior_wm',
+    component: Form_junior_wm
+  },
+  {
+    path: '/form_junior_m/:data/:data1/:data2',
+    name: 'form_junior_m',
+    component: Form_junior_m
+  },
+  {
+    path: '/form_master_wm/:data/:data1/:data2',
+    name: 'form_master_wm',
+    component: Form_master_wm
+  },
+  {
+    path: '/form_master_m/:data/:data1/:data2',
+    name: 'form_master_m',
+    component: Form_master_m
   },
   {
     path: '/about',

@@ -9,7 +9,7 @@
            <b-card-text>
              <p>{{contact.name}} ประจำปี {{contact.year}} ประจำเดือน {{contact.month}} ครั้งที่ {{contact.time}}</p>
           </b-card-text>
-          <router-link class="nav-link" to="/contest/form"><b-button  variant="light">ลงทะเบียน</b-button></router-link>
+          <router-link :to="{name:'addregister',params:{data:key,data1:contact}}"><b-button  variant="light">ลงทะเบียน</b-button></router-link>
          
         </b-card>
         <br>

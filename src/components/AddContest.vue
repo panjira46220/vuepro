@@ -63,20 +63,8 @@
 
       <b-form class="kind">
       <h5>ประเภทการแข่งขัน</h5>
-        <b-form-group id="kind-1" label="ทั่วไป (ชาย)" label-for="kind_1">
+        <b-form-group id="kind-1" label="ทั่วไป (ชาย)" label-for="kind_1"> <p>กรุณาเลือกอย่างน้อย 1 ตัวเลือก</p>
         <b-form-checkbox-group v-model="normal_man" id="normal_1">
-            <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
-            <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)" >ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
-            <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)" >ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
-            <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)" >ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
-            <b-form-checkbox value="ปืนสั้นอัดลม(10 M. Air Pistol)" >ปืนสั้นอัดลม(10 M. Air Pistol)</b-form-checkbox>
-            <b-form-checkbox value="ปืนสั้นยิงเร็ว(25 M. Rapid Fire Pistol)" >ปืนสั้นยิงเร็ว(25 M. Rapid Fire Pistol)</b-form-checkbox>
-            <b-form-checkbox value="ปืนสั้นยิงช้า(50 M. Pistol)" >ปืนสั้นยิงช้า(50 M. Pistol)</b-form-checkbox>
-            <b-form-checkbox value="ปืนสั้น(25 M. Pistol)" >ปืนสั้น(25 M. Pistol)</b-form-checkbox>
-            <b-form-checkbox value="ปืนสั้นมาตรฐาน(25 M. Standard Pistol)" >ปืนสั้นมาตรฐาน(25 M. Standard Pistol)</b-form-checkbox>
-            <b-form-checkbox value="ปืนสั้นชนวนกลาง(25 M. Center Fire Pistol)" >ปืนสั้นชนวนกลาง(10 M. Center Fire Pistol)</b-form-checkbox>
-        
-            <b-form-checkbox value="ไม่มี(None)" >ไม่มี(None)</b-form-checkbox>
             <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)" >ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
             <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)" >ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
             <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)" >ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -90,9 +78,8 @@
         </b-form-checkbox-group>
       </b-form-group>
 
-      <b-form-group id="kind-2" label="ทั่วไป (หญิง)" label-for="kind_2">
+      <b-form-group id="kind-2" label="ทั่วไป (หญิง)" label-for="kind_2"> <p>กรุณาเลือกอย่างน้อย 1 ตัวเลือก</p>
         <b-form-checkbox-group v-model="normal_woman" id="normal_2">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -105,9 +92,8 @@
         </b-form-checkbox-group>
       </b-form-group>
 
-      <b-form-group id="kind-3" label="เยาวชน (ชาย)" label-for="kind_3">
+      <b-form-group id="kind-3" label="เยาวชน (ชาย)" label-for="kind_3"> <p>กรุณาเลือกอย่างน้อย 1 ตัวเลือก</p>
         <b-form-checkbox-group v-model="junior_man" id="normal_3">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -120,9 +106,8 @@
         </b-form-checkbox-group>
       </b-form-group>
 
-       <b-form-group id="kind-4" label="เยาวชน (หญฺิง)" label-for="kind_4">
+       <b-form-group id="kind-4" label="เยาวชน (หญฺิง)" label-for="kind_4"> <p>กรุณาเลือกอย่างน้อย 1 ตัวเลือก</p>
         <b-form-checkbox-group v-model="junior_woman" id="normal_4">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -135,9 +120,8 @@
         </b-form-checkbox-group>
       </b-form-group>
 
-      <b-form-group id="kind-5" label="อาวุโส (ชาย)" label-for="kind_5">
+      <b-form-group id="kind-5" label="อาวุโส (ชาย)" label-for="kind_5"> <p>กรุณาเลือกอย่างน้อย 1 ตัวเลือก</p>
         <b-form-checkbox-group v-model="master_man" id="normal_5">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -150,9 +134,8 @@
         </b-form-checkbox-group>
       </b-form-group>
 
-       <b-form-group id="kind-6" label="อาวุโส (หญฺิง)" label-for="kind_6">
+       <b-form-group id="kind-6" label="อาวุโส (หญฺิง)" label-for="kind_6"> <p>กรุณาเลือกอย่างน้อย 1 ตัวเลือก</p>
         <b-form-checkbox-group v-model="master_woman" id="normal_6">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -240,7 +223,6 @@
       <h5>ประเภทการแข่งขัน</h5>
         <b-form-group id="kind-1" label="ทั่วไป (ชาย)" label-for="kind_1" >
         <b-form-checkbox-group v-model="updateNormal_man" id="normal_1">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -255,7 +237,6 @@
 
       <b-form-group id="kind-2" label="ทั่วไป (หญิง)" label-for="kind_2">
         <b-form-checkbox-group v-model="updateNormal_woman" id="normal_2">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -270,7 +251,6 @@
 
       <b-form-group id="kind-3" label="เยาวชน (ชาย)" label-for="kind_3">
         <b-form-checkbox-group v-model="updateJunior_man" id="normal_3">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -285,7 +265,6 @@
 
        <b-form-group id="kind-4" label="เยาวชน (หญฺิง)" label-for="kind_4">
         <b-form-checkbox-group v-model="updateJunior_woman" id="normal_4">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -300,7 +279,6 @@
 
       <b-form-group id="kind-5" label="อาวุโส (ชาย)" label-for="kind_5">
         <b-form-checkbox-group v-model="updateMaster_man" id="normal_5">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -315,7 +293,6 @@
 
        <b-form-group id="kind-6" label="อาวุโส (หญฺิง)" label-for="kind_6">
         <b-form-checkbox-group v-model="updateMaster_woman" id="normal_6">
-          <b-form-checkbox value="ไม่มี(None)">ไม่มี(None)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวท่านอน(50 M. Rifle Prone)">ปืนยาวท่านอน(50 M. Rifle Prone)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาวอัดลม(10 M. Air RiFle)">ปืนยาวอัดลม(10 M. Air Rifle)</b-form-checkbox>
           <b-form-checkbox value="ปืนยาว 3 ท่า(50 M. Rifle 3 Position)">ปืนยาว 3 ท่า(50 M. Rifle 3 Position)</b-form-checkbox>
@@ -531,5 +508,9 @@ input{
   margin: 0;
   width: 10cm;
   
+}
+p{
+  color: crimson;
+  font-size: 15px;
 }
 </style>

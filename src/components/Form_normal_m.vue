@@ -180,18 +180,26 @@
       </b-form-group>
 
       <!-- ประเภทการแข่งขัน -->
-      <b-form-group id="input-group-7" label="ประเภทที่สมัครแข่งขัน:" label-for="input-9">
-          <b-form-select
-          id="input-12"
-          v-model="competitiontype"
-          :options="competitiontypes"
-          required
-        ></b-form-select>
+
+      
+    <b-form-group label="ชาย(ทั่วไป):" v-slot="{ ariaDescribedby }">
+          <ul>
+          <b-form-checkbox
+            v-for="(normal_man,index) in data1.normal_man"
+            v-model="competitiontype1"
+            :key="index"
+            :value="normal_man"
+            :aria-describedby="ariaDescribedby"
+            name="flavour-3a"
+          >
+            {{normal_man}} 
+          </b-form-checkbox>
+          </ul>
         </b-form-group>
+        
 
 
-
-      <b-button type="submit" variant="primary"  @click="insertToContact(nameth_1,nameth_2,nameeng_1,nameeng_2,nationality,nationality2,age, phone,email,gun_name1,gun_number1,gun_name2, gun_number2,gun_name3,gun_number3)">Submit</b-button>
+      <b-button type="submit" variant="primary"  @click="insertToContact(data_index,data_ty,nameth_1,nameth_2,nameeng_1,nameeng_2,nationality,nationality2,age, phone,email,gun_name1,gun_number1,gun_name2, gun_number2,gun_name3,gun_number3,competitiontype1)">Submit</b-button>
        
 
     <!-- <b-card class="mt-3" header="Form Data Result">
@@ -205,12 +213,17 @@
 
 import firestore from "@/database/firebase"
 var database = firestore.database()
-var registerRef = database.ref('/Register')
+// var registerRef = database.ref('/contacts/')
+var contactRef = database.ref('/contacts')
 
   export default {
+    name: "form_normal_man",
     data() {
       return {
-          registe:{},
+          data_index: this.$route.params.data,
+          data1:this.$route.params.data1,
+          data_ty:this.$route.params.data2,
+          contacts:{},
           nameth_1: '',
           nameth_2: '',
           nameeng_1: '',
@@ -226,14 +239,15 @@ var registerRef = database.ref('/Register')
           gun_number2: '',
           gun_name3: '',
           gun_number3: '',
-          show: true,
-          competitiontype: null,
-          competitiontypes: [{ text: 'Select One', value: null }, ],
+          competitiontype1:'',
+          
+         
       }
     },
+    
     methods: {
       
-      insertToContact (nameth_1,nameth_2,nameeng_1,nameeng_2,nationality,nationality2,age, phone,email,gun_name1,gun_number1,gun_name2, gun_number2,gun_name3,gun_number3) {
+      insertToContact (data_index,data_ty,nameth_1,nameth_2,nameeng_1,nameeng_2,nationality,nationality2,age, phone,email,gun_name1,gun_number1,gun_name2, gun_number2,gun_name3,gun_number3,competitiontype1) {
       let data = {
           nameth_1:nameth_1,
           nameth_2:nameth_2,
@@ -250,8 +264,11 @@ var registerRef = database.ref('/Register')
           gun_number2:gun_number2,
           gun_name3:gun_name3,
           gun_number3:gun_number3,
+          competitiontype1:competitiontype1,
+          data_index:data_index,
+          data_ty:data_ty
       }
-      registerRef.push(data)
+      contactRef.child(this.data_index).child('namelist/normal_man').push(data)
           this.nameth_1 =  ''
           this.nameth_2 = ''
           this.nameeng_1 = ''
@@ -267,11 +284,12 @@ var registerRef = database.ref('/Register')
           this.gun_number2 = ''
           this.gun_name3 = ''
           this.gun_number3 = ''
+          this.competitiontype1 =''
     },
     },
     mounted () {
-    registerRef.on('value', (snapshot) => {
-      this.register = snapshot.val()
+    contactRef.on('value', (snapshot) => {
+      this.contacts = snapshot.val()
     })
   },
   }
