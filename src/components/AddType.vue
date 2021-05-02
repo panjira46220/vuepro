@@ -32,12 +32,37 @@
     <div class="dt-2">
       <b-card no-body>
           <b-tabs pills card vertical nav-wrapper-class="w-50">
-            <b-tab title="ชาย(ทั่วไป)" active><b-card-text><ul v-for="(normal_man,index) in data1.normal_man" :key="index"><li><a href="#">{{normal_man}}</a></li></ul></b-card-text></b-tab>
-            <b-tab title="หญิง(ทั่วไป)"><b-card-text><ul v-for="(normal_woman,index) in data1.normal_woman" :key="index"><li>{{normal_woman}}</li></ul></b-card-text></b-tab>
-            <b-tab title="เยาวชน(ชาย)"><b-card-text><ul v-for="(junior_man,index) in data1.junior_man" :key="index"><li>{{junior_man}}</li></ul></b-card-text></b-tab>
-            <b-tab title="เยาวชน(หญิง)"><b-card-text><ul v-for="(junior_woman,index) in data1.junior_woman" :key="index"><li>{{junior_woman}}</li></ul></b-card-text></b-tab>
-            <b-tab title="อาวุโส(ชาย)"><b-card-text><ul v-for="(master_man,index) in data1.master_man" :key="index"><li>{{master_man}}</li></ul></b-card-text></b-tab>
-            <b-tab title="อาวุโส(หญิง)"><b-card-text><ul v-for="(master_woman,index) in data1.master_woman" :key="index"><li>{{master_woman}}</li></ul></b-card-text></b-tab>
+            <!-- <ul v-for="(normal_man,index) in data1.normal_man" :key="index"><li><router-link class="nav-link" :to="{name:'showlist',params:{data:data,data1:data1,data2:'normal_man'}}">{{normal_man}}</router-link></li></ul> -->
+            <b-tab title="ชาย(ทั่วไป)" active><b-card-text>
+              <ul>
+                <li><router-link class="nav-link" :to="{name:'showlist',params:{data:data,data1:data1,data2:'normal_man'}}">รายชื่อ</router-link></li>
+              </ul></b-card-text></b-tab>
+
+            <b-tab title="หญิง(ทั่วไป)"><b-card-text>
+              <ul >
+                <li><router-link class="nav-link" :to="{name:'showlist2',params:{data:data,data1:data1,data2:'normal_woman'}}">รายชื่อ</router-link></li>
+              </ul></b-card-text></b-tab>
+
+            <b-tab title="เยาวชน(ชาย)"><b-card-text>
+              <ul >
+                <li><router-link class="nav-link" :to="{name:'showlist3',params:{data:data,data1:data1,data2:'junior_man'}}">รายชื่อ</router-link></li>
+              </ul></b-card-text></b-tab>
+
+            <b-tab title="เยาวชน(หญิง)"><b-card-text>
+              <ul >
+                <li><router-link class="nav-link" :to="{name:'showlist4',params:{data:data,data1:data1,data2:'junior_woman'}}">รายชื่อ</router-link></li>
+              </ul></b-card-text></b-tab>
+
+            <b-tab title="อาวุโส(ชาย)"><b-card-text>
+              <ul >
+                <li><router-link class="nav-link" :to="{name:'showlist5',params:{data:data,data1:data1,data2:'master_man'}}">รายชื่อ</router-link></li>
+              </ul></b-card-text></b-tab>
+
+            <b-tab title="อาวุโส(หญิง)"><b-card-text>
+              <ul >
+                <li><router-link class="nav-link" :to="{name:'showlist6',params:{data:data,data1:data1,data2:'master_woman'}}">รายชื่อ</router-link></li>
+              </ul></b-card-text></b-tab>
+
           </b-tabs>
       </b-card>
     </div>

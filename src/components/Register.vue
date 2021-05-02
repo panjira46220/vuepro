@@ -12,7 +12,7 @@
             <b-tab title="ชาย(ทั่วไป)" >
               <b-card-text>
                 <ul> 
-                  <li><router-link class="nav-link" :to="{name:'form_normal_m',params:{data:s_data,data1:contact,data2:normal_man}}">ลงสมัคร</router-link></li>
+                  <li><router-link class="nav-link" :to="{name:'form_normal_m',params:{data:s_data,data1:data1,data2:normal_man}}">ลงสมัคร</router-link></li>
                 </ul></b-card-text></b-tab>
 
             <b-tab title="หญิง(ทั่วไป)">
@@ -98,7 +98,7 @@ li {
 a {
   color: rgb(64, 6, 158);
 }
-h1{
+h3{
  
   font-weight: 100;
   text-align: center;

@@ -11,6 +11,12 @@ import Form_junior_wm from '@/components/Form_junior_wm'
 import Form_junior_m from '@/components/Form_junior_m'
 import Form_master_wm from '@/components/Form_master_wm'
 import Form_master_m from '@/components/Form_master_m'
+import Showlist from '@/components/Showlist'
+import Showlist_normal_w from '@/components/Showlist_normal_w'
+import Showlist_junior_m from '@/components/Showlist_junior_m'
+import Showlist_junior_w from '@/components/Showlist_junior_w'
+import Showlist_master_m from '@/components/Showlist_master_m'
+import Showlist_master_w from '@/components/Showlist_master_w'
 Vue.use(VueRouter)
 
 const routes = [
@@ -38,6 +44,36 @@ const routes = [
     path: '/addcontest/:data/:data1',
     name: 'addtype',
     component: AddType
+  },
+  {
+    path: '/showlist/:data/:data1/:data2',
+    name: 'showlist',
+    component: Showlist
+  },
+  {
+    path: '/showlist2/:data/:data1/:data2',
+    name: 'showlist2',
+    component: Showlist_normal_w
+  },
+  {
+    path: '/showlist3/:data/:data1/:data2',
+    name: 'showlist3',
+    component: Showlist_junior_m
+  },
+  {
+    path: '/showlist4/:data/:data1/:data2',
+    name: 'showlist4',
+    component: Showlist_junior_w
+  },
+  {
+    path: '/showlist5/:data/:data1/:data2',
+    name: 'showlist5',
+    component: Showlist_master_m
+  },
+  {
+    path: '/showlist6/:data/:data1/:data2',
+    name: 'showlist6',
+    component: Showlist_master_w
   },
   {
     path: '/form_normal_m/:data/:data1/:data2',
