@@ -1,4 +1,5 @@
 import * as firebase from 'firebase'
+import "firebase/auth"
 var firebaseConfig = {
     apiKey: "AIzaSyBihnRYIuEePsdLR_X-ZtUcLFHmJfvFEuc",
     authDomain: "ppproject-19364.firebaseapp.com",
@@ -12,4 +13,6 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+  firebase.auth();
+  firebase.auth.GoogleAuthProvider();
   export default firebase;
